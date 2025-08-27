@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="T.css">
+</head>
+<body>
+   <div class="slider-container">
+  <button class="prev-btn">‹</button>
+
+  <div class="slider-wrapper">
+    <div class="slider">
+      
+      <!-- Clone last 3 items -->
+      <div class="slide">Testimoni 4</div>
+      <div class="slide">Testimoni 5</div>
+      <div class="slide">Testimoni 6</div>
+
+      <!-- Original items -->
+      <div class="slide">-Budi-
+        <p>wow</p>
+      </div>
+      <div class="slide">-Asep-
+        <p>keren</p>
+      </div>
+      <div class="slide">-Akmal-
+        <p>Mantap men</p>
+      </div>
+      <div class="slide">Dev
+        <a href="index.html"><p>HomePage</p></a>
+      </div>
+      
+      <!-- Clone first 3 items -->
+      <div class="slide">-Budi-
+        <p>wow</p>
+      </div>
+      <div class="slide">-Asep-
+        <p>keren</p>
+      </div>
+      <div class="slide">-Akmal-
+        <p>Mantap men</p>
+      </div>
+    </div>
+  </div>
+  
+
+  <button class="next-btn">›</button>
+</div>
+
+</body>
+<script>
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+
+  const visibleSlides = 3;
+  const totalSlides = slides.length;
+  const slideWidth = slides[0].offsetWidth + 40; // includes margin
+
+  let index = visibleSlides; // Start at first original slide
+  let isTransitioning = false;
+
+  // Initial position
+  slider.style.transform = `translateX(-${slideWidth * index}px)`;
+
+  function goToSlide(direction) {
+    if (isTransitioning) return;
+    isTransitioning = true;
+
+    index += direction;
+    slider.style.transition = 'transform 0.5s ease';
+    slider.style.transform = `translateX(-${slideWidth * index}px)`;
+  }
+
+  slider.addEventListener('transitionend', () => {
+    isTransitioning = false;
+
+    if (index >= totalSlides - visibleSlides) {
+      // Reset to original start
+      slider.style.transition = 'none';
+      index = visibleSlides;
+      slider.style.transform = `translateX(-${slideWidth * index}px)`;
+    }
+
+    if (index <= 0) {
+      // Reset to original end
+      slider.style.transition = 'none';
+      index = totalSlides - visibleSlides * 2;
+      slider.style.transform = `translateX(-${slideWidth * index}px)`;
+    }
+  });
+
+  nextBtn.addEventListener('click', () => goToSlide(1));
+  prevBtn.addEventListener('click', () => goToSlide(-1));
+
+  // Optional auto slide
+  // setInterval(() => goToSlide(1), 5000);
+</script>
+
+
+</html>

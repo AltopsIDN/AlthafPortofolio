@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/41ede40f14.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="fade-right" data-aos-duration="1000">
+                <a href="#">PORTOFOLIO</a>
+            </div>
+        <div class="navLink">
+            <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"><a href="a.html">About</a></div>
+            <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"><a href="s.html">Skills</a></div>
+            <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"><a href="T.html">Testimony</a></div>
+            <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"><a href="#">Certificate</a></div>
+            <div class="contact-button"><a href="c.html">Contact Us</a></div>
+        </div>
+        </div>
+        
+        
+        <div class="hamburger" onclick="hamburger()">
+            <i class="fa-solid fa-bars" style="color: purple;"></i>
+        </div>
+        <div class="dropdown">
+            <div class="hamburger-links">
+                <a href="a.html">About</a>
+                <a href="s.html">Skills</a>
+                <a href="#">Certificate</a>
+                <a href="c.html">Contact Us</a>
+                <div class="cancel" onclick="cancel()">
+                <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+            </div>
+        </div>
+        
+        </div>
+    </nav>
+
+    <!-- HERO START -->
+    <section class="main-container">
+        <div>
+            <img src="assets/src/img/Altops.png" alt="Hero image"> 
+        </div>
+        <div class="content">
+            <h1>Hello i'm <span>Althaf</span></h1>
+            <div class="typewriter">I'm a <span></span></div>
+            <p>Hello this is my first portofolio website🤯🤯</p>
+            <div class="social-Links">
+                <a href="https://github.com/AltopsIDN" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+                <a href="https://www.instagram.com/altopz__/" target="_blank"><i class="fa-brands fa-instagram" style="color: #ff00f7;"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-linkedin" style="color: #2275ce;"></i></a>
+                <a href="https://x.com/Altops2010" target="_blank"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
+                <a href="https://www.youtube.com/@Altops-e81" target="_blank"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #00ffb3;"></i></a>
+            </div>
+            <div class="btn">
+                <button><a href="assets/src/img/Yes.png">Download</a></button>
+            </div>
+        </div>
+    </section>
+    <!-- HERO END -->
+
+    <!-- FOOTER START -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>Footer</h2>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Althaf. All rights reserved.</p>
+  </div>
+</footer>
+    <!-- FOOTER END -->
+
+</body>
+<script>
+    function hamburger(){
+        const navbar = document.querySelector(".dropdown")
+        navbar.style.transform = "translateY(0px)"
+    }
+    function cancel(){
+        const navbar = document.querySelector(".dropdown")
+        navbar.style.transform = "translateY(-500px)"
+    }
+</script>
+</html>
