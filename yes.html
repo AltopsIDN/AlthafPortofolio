@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Testimonials</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #f5f5f5;
+    }
+    p.subtitle {
+      color: #666;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .profile img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+    .profile h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #222;
+    }
+    .profile span {
+      display: block;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .quote {
+      font-style: italic;
+      color: #444;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>What Our Customers Say</h2>
+    <p class="subtitle">Real experiences from people who love our product</p>
+
+    <div class="testimonials">
+      <div class="card">
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Johnson">
+          <div>
+            <h3>Sarah Johnson</h3>
+            <span>Graphic Designer</span>
+          </div>
+        </div>
+        <p class="quote">
+          “This wireless mouse is a game-changer! The ergonomic design makes it comfortable to use all day, and the battery lasts forever.”
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="David Lee">
+          <div>
+            <h3>David Lee</h3>
+            <span>Software Engineer</span>
+          </div>
+        </div>
+        <p class="quote">
+          “I love how smooth and responsive this mouse is. It connects instantly and works perfectly with my laptop and desktop.”
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Emma Brown">
+          <div>
+            <h3>Emma Brown</h3>
+            <span>Student</span>
+          </div>
+        </div>
+        <p class="quote">
+          “Lightweight, stylish, and reliable. I take it everywhere with me, and it never disappoints. Highly recommended!”
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

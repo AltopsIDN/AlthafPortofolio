@@ -58,4 +58,6 @@ body {
   text-decoration: none;
   font-weight: bold;
   color: purple;
+  justify-content: end;
+  text-align: baseline;
 }
